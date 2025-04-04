@@ -1,7 +1,7 @@
 {
   "name": "open-functions/jira-service-desk",
   "description": "The Jira Service Desk Open Function package integrates Jira Service Desk with large language models (LLMs) using the Open Functions architecture, enabling streamlined repository management and file operations.",
-  "homepage": "https://github.com/AssistantEngine/open-functions-jira-service-desk",
+  "homepage": "https://github.com/open-functions/jira-service-desk",
   "license": "MIT",
   "authors": [
     {
