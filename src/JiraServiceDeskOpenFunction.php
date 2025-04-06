@@ -63,19 +63,19 @@ class JiraServiceDeskOpenFunction extends AbstractOpenFunction
         return array_merge($responseItems, $binaryItems);
     }
 
-    public function createCard(string $listName, string $type, string $name, string $desc)
+    public function createCard(string $listName, string $type, array $data)
     {
         return json_encode([
             "id" => $this->client->createCard(
-                new CreateCardParams($listName, $type, new CreateCardData($name, $desc))
+                new CreateCardParams($listName, $type, new CreateCardData($data['name'], $data['desc']))
             )
         ]);
     }
 
-    public function updateCard(string $cardId, string $name, string $desc)
+    public function updateCard(string $cardId, array $data)
     {
         return json_encode($this->client->updateCard(
-            new UpdateCardParams($cardId, new UpdateCardData($name, $desc))
+            new UpdateCardParams($cardId, new UpdateCardData($data['name'], $data['desc']))
         ));
     }
 
